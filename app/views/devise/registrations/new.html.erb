@@ -1,0 +1,42 @@
+<div class="col-lg-8 mx-auto"> 
+  <%= render "devise/shared/error_messages", resource: resource %>
+</div>
+<div class="col-lg-8 mx-auto"> 
+  <div class="card shadow d-flex " >
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-4 my-auto ms-3 ">
+          <h1 class="text-secondary">DONT HAVE<br>ACCOUNT<br> SIGN UP<br>FOR FREE<br>NOW</h1>
+        </div>
+        <div class="col-lg-4 mx-auto mb-2">
+          <h2>Sign up</h2>
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name), data: {turbo: false}) do |f| %>
+            <div class="field">
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "new-password" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+            </div>
+
+            <div class="actions mt-1">
+              <%= f.submit "Sign up" %>
+            </div>
+          <% end %>
+          <br>
+          <p>Already have account? <%= render "devise/shared/links" %> </p>
+        </div>
+      </div>  
+    </div>
+  </div>
+</div>

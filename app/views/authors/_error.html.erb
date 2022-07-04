@@ -1,0 +1,10 @@
+<br>
+<% if @author.errors.any? %>
+  <div >
+    <ul>
+      <% @author.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

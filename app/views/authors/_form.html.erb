@@ -1,0 +1,13 @@
+<%= form_for @author do |f| %>
+
+    <%= f.label :First_Name %><br>
+    <%= f.text_field :f_name %>
+    <br>
+    <%= f.label :Last_name %><br>
+    <%= f.text_field :l_name %><br>
+    <%= f.label :Email %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+    <%= f.text_field :email %>
+    <br>
+    <br>
+    <%= f.submit %>
+<% end %>
