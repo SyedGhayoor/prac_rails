@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  v_id: 1
+  type: 
+  name: MyString
+  make: MyString
+  model: 1
+  wheels: 1
+
+two:
+  v_id: 1
+  type: 
+  name: MyString
+  make: MyString
+  model: 1
+  wheels: 1

@@ -46,11 +46,21 @@ class AuthorsController < ApplicationController
     
 
     private
+    def set_type
+        case params[:type]
+        when 'Student'
+          'student'
+        when 'Teacher'
+          'teacher'
+        end
+      end
+  
+
     def find_author
         @author = Author.find(params[:id])
       end
 
     def author_params
-        params.require(:author).permit(:f_name, :l_name, :email)
+        params.require(:author).permit(:f_name, :l_name, :email, :type)
     end
 end

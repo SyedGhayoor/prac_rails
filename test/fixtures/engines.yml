@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  runable_id: 1
+  runable_type: MyString
+
+two:
+  runable_id: 1
+  runable_type: MyString

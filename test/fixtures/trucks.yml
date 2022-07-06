@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  make: MyString
+  model: 1
+  wheels: 1
+
+two:
+  name: MyString
+  make: MyString
+  model: 1
+  wheels: 1

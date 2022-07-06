@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_06_29_153818) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_06_101317) do
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -34,6 +34,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_29_153818) do
     t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "type"
+  end
+
+  create_table "bikes", force: :cascade do |t|
+    t.string "name"
+    t.string "make"
+    t.integer "model"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "books", force: :cascade do |t|
@@ -42,6 +51,48 @@ ActiveRecord::Schema[7.0].define(version: 2022_06_29_153818) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "publisher_name"
+  end
+
+  create_table "cars", force: :cascade do |t|
+    t.string "name"
+    t.string "make"
+    t.integer "model"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "engines", force: :cascade do |t|
+    t.integer "runable_id"
+    t.string "runable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "novals", force: :cascade do |t|
+    t.integer "writeable_id"
+    t.string "writeable_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "trucks", force: :cascade do |t|
+    t.string "name"
+    t.string "make"
+    t.integer "model"
+    t.integer "wheels"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "vehicles", force: :cascade do |t|
+    t.integer "v_id"
+    t.string "type"
+    t.string "name"
+    t.string "make"
+    t.integer "model"
+    t.integer "wheels"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

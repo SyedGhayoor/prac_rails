@@ -1,10 +1,10 @@
 <br>
-<% if @author.errors.any? %>
+<% if @noval.errors.any? %>
   <div class="alert alert-danger alert-dismissible col-lg-4 mx-auto fade show">
     <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
     <div >
       <ul>
-        <% @author.errors.full_messages.each do |msg| %>
+        <% @noval.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>

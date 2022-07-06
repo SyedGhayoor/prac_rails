@@ -1,0 +1,11 @@
+<%= form_for Noval.new do |f| %>
+
+    <%= f.label :writeable_id %><br>
+    <%= f.text_field :writeable_id %>
+    <br>
+    <%= f.label :writeable_type %><br>
+    <%= f.text_field :writeable_type %><br>
+    <br>
+    <br>
+    <%= f.submit " Add ", class: "btn btn-primary" %>
+<% end %>

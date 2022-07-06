@@ -1,0 +1,45 @@
+<div class="container ">
+<h1>All Vehicles</h1>
+<style>
+table, th, td {
+    text-align: left;
+  padding: 8px;
+
+  border:1px solid black; 
+}
+
+
+th {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+</style>
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th>Vehicle ID</th>
+            <th>Vehicle Type</th>
+            <th>Vehicle Name</th>
+            <th>Vehicle Make</th>
+            <th>Vehicle Model</th>
+            <th>Vehicle Wheels</th>
+
+            
+            <th Colspan="3"> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @vehicle.each do |vehicle| %>
+            <tr>
+                <td><%= @vehicle.v_id%></td>
+                <td><%= @vehicle.type%></td>
+                <td><%= @vehicle.name%></td>
+                <td><%= @vehicle.make%></td>
+                <td><%= @vehicle.model%></td>
+                <td><%= @vehicle.wheels%></td>
+                <td><%= link_to 'View', engine%>
+                <td><%= link_to "Destroy", engine, data: {turbo_method: :delete, turbo_confrim: "Are you sure?"}, :cofirm => "Are you sure?" %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+</div>

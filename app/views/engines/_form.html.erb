@@ -1,0 +1,11 @@
+<%= form_for Engine.new do |f| %>
+
+    <%= f.label :runable_id %><br>
+    <%= f.text_field :runable_id %>
+    <br>
+    <%= f.label :runable_type %><br>
+    <%= f.text_field :runable_type %><br>
+    <br>
+    <br>
+    <%= f.submit " Add ", class: "btn btn-primary" %>
+<% end %>

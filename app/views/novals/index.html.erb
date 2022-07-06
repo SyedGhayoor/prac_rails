@@ -1,0 +1,36 @@
+<div class="container ">
+<h1>All Engines</h1>
+<style>
+table, th, td {
+    text-align: left;
+  padding: 8px;
+
+  border:1px solid black; 
+}
+
+
+th {
+  background-color: rgba(150, 212, 212, 0.4);
+}
+</style>
+
+<table style="width:100%">
+    <thead>
+        <tr>
+            <th>Writeable ID</th>
+            <th>Writeable Type</th>
+            <th Colspan="3"> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @novals.each do |noval| %>
+            <tr>
+                <td><%= noval.writeable_id%></td>
+                <td><%= noval.writeable_type%></td>
+                <td><%= link_to 'View', noval%>
+                <td><%= link_to "Destroy", noval, data: {turbo_method: :delete, turbo_confrim: "Are you sure?"}, :cofirm => "Are you sure?" %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+</div>

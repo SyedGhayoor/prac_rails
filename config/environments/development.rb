@@ -65,6 +65,9 @@ Rails.application.configure do
 
   config.sass.inline_source_maps = true
 
+  config.action_controller.always_permitted_parameters = %w( controller action format )
+
+
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

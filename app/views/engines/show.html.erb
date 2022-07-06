@@ -3,11 +3,10 @@
     <br>
     <div class="card shadow d-flex " >
         <div class="card-body">
-            <h1> Author Details </h1>
+            <h1> Engine Details </h1>
 
-            <p><strong>First Name :</strong> <%= @author.f_name %></p>
-            <p><strong>Last Name :</strong> <%= @author.l_name %></p>
-            <p><strong>Email :</strong> <%= @author.email %></p>
+            <p><strong>First Name :</strong> <%= @engine.runable_id %></p>
+            <p><strong>Last Name :</strong> <%= @engine.runable_type %></p>
 
             <%= link_to 'Back', root_path, class: "btn btn-secondary"%>
         </div>
